@@ -1,0 +1,114 @@
+@font-face {
+  font-family: 'qlab4';
+  src:  url('./fonts/qlab4.eot');
+  src:  url('./fonts/qlab4.eot') format('embedded-opentype'),
+    url('./fonts/qlab4.ttf') format('truetype'),
+    url('./fonts/qlab4.woff') format('woff'),
+    url('./fonts/qlab4.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon {
+  font-family: 'qlab4' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.auto_continue_stubby:before {
+  content: "\e91d";
+}
+.auto_continue:before {
+  content: "\e900";
+}
+.auto_follow:before {
+  content: "\e901";
+}
+.cue_arm:before {
+  content: "\e902";
+}
+.cue_audio:before {
+  content: "\e903";
+}
+.cue_camera:before {
+  content: "\e904";
+}
+.cue_devamp:before {
+  content: "\e905";
+}
+.cue_disarm:before {
+  content: "\e906";
+}
+.cue_fade:before {
+  content: "\e907";
+}
+.cue_goto:before {
+  content: "\e908";
+}
+.cue_group:before {
+  content: "\e909";
+}
+.cue_light:before {
+  content: "\e90a";
+}
+.cue_load:before {
+  content: "\e90b";
+}
+.cue_memo:before {
+  content: "\e90c";
+}
+.cue_mic:before {
+  content: "\e90d";
+}
+.cue_midi_file:before {
+  content: "\e90e";
+}
+.cue_midi:before {
+  content: "\e90f";
+}
+.cue_network:before {
+  content: "\e910";
+}
+.cue_pause:before {
+  content: "\e911";
+}
+.cue_reset:before {
+  content: "\e912";
+}
+.cue_script:before {
+  content: "\e913";
+}
+.cue_start:before {
+  content: "\e914";
+}
+.cue_stop:before {
+  content: "\e915";
+}
+.cue_target:before {
+  content: "\e916";
+}
+.cue_text:before {
+  content: "\e917";
+}
+.cue_timecode:before {
+  content: "\e918";
+}
+.cue_video:before {
+  content: "\e919";
+}
+.cue_wait:before {
+  content: "\e91a";
+}
+.status_broken:before {
+  content: "\e91b";
+}
+.status_flagged:before {
+  content: "\e91c";
+}
