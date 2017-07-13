@@ -15,7 +15,7 @@ argv
   .option('-b, --indicate-broken-cues', 'Indicate broken cues with a red X')
   .option('-s, --hide-status', 'Hide cue status')
   .option('-t, --truncate-cue-names', 'Truncate cue names instead of wrapping them (can cause issues with printing)')
-  .version(readPkg.sync().version)
+  .version(readPkg.sync(__dirname).version)
   .parse(process.argv);
 
 var options = argv.opts();
