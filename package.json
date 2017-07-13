@@ -1,6 +1,6 @@
 {
   "name": "qlab-html",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Exports the contents of a QLab workspace to a HTML file.",
   "main": "index.js",
   "bin": {
