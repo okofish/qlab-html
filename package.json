@@ -19,5 +19,9 @@
     "opn": "^5.1.0",
     "osc": "^2.2.0",
     "read-pkg": "^2.0.0"
+  },
+  "optionalDependencies": {
+    "chrome-remote-interface": "^0.24.1",
+    "chrome-runner": "^1.3.3"
   }
 }
