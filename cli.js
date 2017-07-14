@@ -10,7 +10,7 @@ var readPkg = require('read-pkg');
 argv
   .description('Exports contents of the current QLab workspace to an HTML file')
   .option('-o, --output [filename]', 'File to save HTML/PDF to (defaults to <workspace name>.html; use - to echo to stdout)')
-  .option('-O, --open', 'Open HTML file in default browser after saving')
+  .option('-p, --open', 'Open HTML file in default browser after saving')
   .option('-n, --show-notes', 'Show cue notes')
   .option('-d, --dark', 'Use dark theme')
   .option('-r, --break-after-cue-lists', 'Force a page break after each cue list/cart when the page is printed')
@@ -56,7 +56,7 @@ if (options.output === '-') {
       } else {
         console.log(`Workspace saved to ${htmlPath}`);
         if (options.open === true) {
-          opn(filePath, {
+          opn(htmlPath, {
             wait: false
           });
         }

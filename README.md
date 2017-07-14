@@ -21,7 +21,7 @@ The design of qlab-html's rendered pages is heavily inspired by Josh Langman's [
 
 1. Install the qlab-html CLI with `npm install -g qlab-html`.
 2. Open the QLab workspace you want to export - it doesn't have to be focused, but it must be the frontmost open workspace.
-3. Run `qlab-html -O` to export the workspace to `<workspace name>.html` and open the file in your default browser.
+3. Run `qlab-html -p` to export the workspace to `<workspace name>.html` and open the file in your default browser.
 4. Run `qlab-html -h` for full CLI options.
 
 ## Known bugs/issues
