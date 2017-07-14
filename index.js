@@ -1,6 +1,7 @@
 var fs = require('fs');
-var importer = require('./src/workspace-import');
 var generator = require('./src/html-generate');
+var importer = require('./src/workspace-import');
+var path = require('path');
 
 function importAndGenerate(options, cb) {
   if (typeof options === 'function') {
@@ -14,7 +15,7 @@ function importAndGenerate(options, cb) {
 }
 
 module.exports.generateHTML = importAndGenerate;
-module.exports.exportHTML = function(path, options, cb) {
+module.exports.exportHTML = function(htmlPath, options, cb) {
   if (typeof options === 'function') {
     cb = options;
     options = {};
@@ -22,12 +23,18 @@ module.exports.exportHTML = function(path, options, cb) {
 
   importer.import(function(cueLists) {
     var html = generator.generate(cueLists, options);
-    if (!path) {
-      path = `${cueLists.workspaceName}.html`;
+    if (!htmlPath) {
+      htmlPath = `${cueLists.workspaceName}.html`;
+    } else {
+      var pathObj = path.parse(htmlPath);
+      pathObj.ext = '.html';
+      pathObj.base = undefined;
+      htmlPath = path.format(pathObj);
+      console.log(htmlPath)
     }
-    fs.writeFile(path, html, function(err) {
+    fs.writeFile(htmlPath, html, function(err) {
       if (cb) {
-        cb(err, path, html);
+        cb(err, htmlPath, html);
       }
     });
   });
