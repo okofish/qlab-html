@@ -30,6 +30,9 @@ body.is-dark {
   background-color: #333333;
   color: hsla(0, 0%, 92%, 1);
 }
+body.is-dark .cue-list-table .table-header {
+  border-bottom-color: hsla(0, 0%, 92%, 1);
+}
 body.is-dark .cue-list-table .cue-row:nth-child(even) {
   background-color: rgba(255, 255, 255, .04);
 }
