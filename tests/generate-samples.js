@@ -37,7 +37,7 @@ var samples = [{
 samples.forEach(generate);
 
 function generate(sample) {
-  qlabHTML.exportHTML(path.join('../samples', sample.filename), sample, function(err, htmlPath, html) {
+  qlabHTML.exportHTML(path.join(__dirname, '../samples', sample.filename), sample, function(err, htmlPath, html) {
     if (!err) {
       if (sample.pdf === true) {
         qlabHTML.convertHTMLtoPDF(html, sample.landscape, function(pdf) {
