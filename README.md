@@ -26,7 +26,8 @@ The design of qlab-html's rendered pages is heavily inspired by Josh Langman's [
 
 ## Known bugs/issues
 
-- Non-ASCII cue names do not render properly
+- ~~Non-ASCII cue names do not render properly~~
+- ~~Very large workspaces (>600-800 cues) may fail to export with a RangeError~~
 - Cues generated with the --truncate-cue-names option do not resize to fit the window/printed page
 - Cue cart cues generated with the --truncate-cue-names option do not wrap to fill the cell
 - There is no support for rendering collapsed group cues as such (this data is not available from QLab over OSC)
