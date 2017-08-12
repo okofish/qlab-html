@@ -37,11 +37,15 @@ function addCuesFromList($, table, cues, options, parentGroups) {
     if (isWait) {
       cell.addClass('is-wait');
     }
+    if (options.ms === true) {
+      cell.addClass('is-ms');
+    }
     if (duration > 0) {
       var centiseconds = leftPad(Math.round((duration - Math.floor(duration)) * 100), 2, 0);
+      var milliseconds = leftPad(Math.round((duration - Math.floor(duration)) * 1000), 3, 0);
       var seconds = leftPad(Math.floor(duration) % 60, 2, 0);
       var minutes = leftPad(Math.floor(duration / 60), 2, 0);
-      cell.text(`${minutes}:${seconds}.${centiseconds}`);
+      cell.text(`${minutes}:${seconds}.${options.ms === true ? milliseconds : centiseconds}`);
     }
     return cell
   }

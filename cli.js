@@ -19,6 +19,7 @@ argv
   .option('-t, --truncate-cue-names', 'Truncate cue names instead of wrapping them (can cause issues with printing)')
   .option('--export-pdf', 'Render workspace to PDF instead of HTML (experimental; requires chrome-remote-interface and chrome-runner)')
   .option('--landscape', 'Render PDF in landscape mode instead of portrait')
+  .option('--ms', 'Display waits and durations with millisecond resolution')
   .version(readPkg.sync(__dirname).version)
   .parse(process.argv);
 
